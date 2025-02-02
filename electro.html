@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity Management Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Electricity Management</h1>
+    <div class="chatbot">
+      <!-- User Input Section -->
+      <div class="input-section">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="units">Last Month's Units:</label>
+        <input type="number" id="units" placeholder="Enter units used" required>
+
+        <label for="has-ac">Do you have ACs?</label>
+        <select id="has-ac">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="num-ac">Number of ACs:</label>
+        <input type="number" id="num-ac" placeholder="Enter number of ACs" disabled>
+
+        <button id="submit-btn">Submit</button>
+      </div>
+
+      <!-- Insights and Recommendations Section -->
+      <div class="output-section">
+        <h2>Insights and Recommendations</h2>
+        <div id="insights"></div>
+      </div>
+
+      <!-- Target Setting Section -->
+      <div class="target-section">
+        <h2>Set and Track Targets</h2>
+        <label for="target-period">Target Period:</label>
+        <select id="target-period">
+          <option value="month">This Month</option>
+          <option value="year">This Year</option>
+        </select>
+
+        <label for="budget">Budget (INR):</label>
+        <input type="number" id="budget" placeholder="Enter your budget" required>
+
+        <label for="next-bill-date">Next Bill Date:</label>
+        <input type="date" id="next-bill-date" required>
+
+        <label for="current-units">Current Units Used:</label>
+        <input type="number" id="current-units" placeholder="Enter current units" required>
+
+        <button id="track-btn">Track Progress</button>
+        <div id="target-output"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
